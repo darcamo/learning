@@ -5,7 +5,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "general_defs.h"
-#include <SDL.h>
+#include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 #include "game.h"
 

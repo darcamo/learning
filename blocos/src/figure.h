@@ -3,7 +3,7 @@
 #include "general_defs.h"
 #include <iostream>
 #include <vector>
-#include <SDL.h>
+#include <SDL/SDL.h>
 #include <assert.h>
 #include "board.h"
 
