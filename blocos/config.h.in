@@ -1,0 +1,10 @@
+// @config_warning@
+
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// The configured options and settings for blocos
+#define Tutorial_VERSION_MAJOR @BLOCOS_VERSION_MAJOR@
+#define Tutorial_VERSION_MINOR @BLOCOS_VERSION_MINOR@
+
+#endif

@@ -1,0 +1,8 @@
+bin
+build
+html
+CMakeFiles
+src/config.h
+Makefile
+src/blocos
+lib*.a
