@@ -2,14 +2,28 @@ sources:
   - src_passo*/CMakeLists.txt|pyg:
       - pyg: {lexer: "cmake"}
   - src_passo*/*.cpp|pyg:
-      - pyg: {lexer: "c", allow-unprintable-input: True, line_numbers : True}
+      - pyg: {lexer: "c++", allow-unprintable-input: True}
+  - src_passo*/*.cpp|idio:
+      - idio: {lexer: "c++"}
   
+
+        
+compila_versoes:
+  - src_passo*/run_cmake_and_compile.sh|shint|pyg:
+      - shint: {"output": False, "use-wd": False}
+  - run_passo1.sh|shint|pyg:
+      - contents: "cd src_passo1/ && ./tetris"
+      - shint: {"output": True, "use-wd": False}
+#   - src_passo1/run_cmake_and_compile.sh|bash:
+#       - bash: { 'use-wd' : False }
+          
 
 
 criando_tetris:
   - criando_tetris.md|jinja|pandoc|easyhtml:
       - buttondown.css
       - sources
+      - compila_versoes
       - pandoc:
           args: "-s -S --mathjax -c buttondown.css -f markdown+abbreviations -t HTML5"
     

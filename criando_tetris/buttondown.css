@@ -410,7 +410,7 @@ dd+dd /* 2nd or greater definition of a term */
 /* ---- Footnotes ---- */
 
 a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */
-    font-size: small; 
+    /* font-size: small;  */
     vertical-align: text-top;
 }
 
