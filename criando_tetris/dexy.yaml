@@ -1,0 +1,15 @@
+sources:
+  - src_passo*/CMakeLists.txt|pyg:
+      - pyg: {lexer: "cmake"}
+  - src_passo*/*.cpp|pyg:
+      - pyg: {lexer: "c", allow-unprintable-input: True, line_numbers : True}
+  
+
+
+criando_tetris:
+  - criando_tetris.md|jinja|pandoc|easyhtml:
+      - buttondown.css
+      - sources
+      - pandoc:
+          args: "-s -S --mathjax -c buttondown.css -f markdown+abbreviations -t HTML5"
+    
