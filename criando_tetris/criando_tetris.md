@@ -110,7 +110,7 @@ Para finalizar, finalizamos a SDL como antes.
 {{ d['src_passo2/main.cpp|idio']["FinalizaSDL"] }}
 
 
-## Passo 2.5: Criando uma janela ##
+## Passo 2.5: Reorganizando o código ##
 
 Por enquanto colocamos todo o código na nossa função main no arquivo
 `main.cpp`, mas em geral o ideal é que o programa seja escrito de maneira
@@ -124,11 +124,46 @@ constantes, chamado de `general_defs.h` que podemos apenas incluir.
 
 Como vamos usar os ponteiros para a janela e para as duas surfaces nessas
 funções e na main, **por enquanto** vamos transformá-las em variáveis
-globais movendo suas definições para fora da função main. Nosso novo
-arquivo `main.cpp` é mostrado abaixo.
+globais movendo suas definições para fora da função main.
 
-{{ d['src_passo2.5/main.cpp|pyg'] }}
+<!-- Nosso novo -->
+<!-- arquivo `main.cpp` é mostrado abaixo. -->
+
+<!--  d['src_passo2.5/main.cpp|pyg']  -->
 
 
 
+# Passo 3: Lidando com eventos #
+
+Como estamos criando um jogo isso significa que precisamos tratar
+**entradas** feitas pelo jogador. Na SDL isso corresponde a tratar
+eventos[^3].
+
+[^3]: Um evento pode ser precionar uma tecla, clicar com o mouse, apertar um botão em um gamepad, etc..
+
+
+Após a SDL ser iniciada e a media ser carregada, criamos duas variáveis, um
+flag `quit` que indica se o usuário saiu ou não (clicou no botão fechar da
+janela, por exemplo), e uma variável para do tipo `SDL_Event`.
+
+{{ d['src_passo3/main.cpp|idio']["DeclaraVariaveisParaTratarEvento"] }}
+
+
+Para a SDL, um evento é algo como pressionar de uma tecla, um movimento do
+mouse, o pressionar de um botão de um gamepad, etc. Por enquanto vamos
+apenas nos preocupar com o evento de "quit" e finalizar o programa caso ele
+ocorra. Para detectar se eventos ocorreram chamamos a função
+`SDL_PollEvent`, que retorna 1 caso um evento tenha ocorrido ou 0 se não há
+eventos na fila.
+
+Chamamos `SDL_PollEvent` como condição de parada em um outro laço
+while. Caso haja um evento então o corpo do while é executado, onde
+testamos que tipo de evento ocorreu e se for o evento do tipo `SDL_QUIT`
+mudamos nossa flag `quit` para true, como mostrado abaixo.
+
+{{ d['src_passo3/main.cpp|idio']["WhileApplicationIsRunning"] }}
+
+Note que devido ao laço `while( !quit )` o programa só irá terminar quando
+o evento `SDL_QUIT` ocorrer. Logo, não precisamos mais chamar `SDL_Delay`
+como antes.
 
