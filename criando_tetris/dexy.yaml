@@ -3,6 +3,8 @@ sources:
       - pyg: {lexer: "cmake"}
   - src_passo*/*.cpp|pyg:
       - pyg: {lexer: "c++", allow-unprintable-input: True}
+  - src_passo2.5/general_defs.h|pyg:
+      - pyg: {lexer: "c++", allow-unprintable-input: True}
   - src_passo*/*.cpp|idio:
       - idio: {lexer: "c++"}
   
@@ -13,7 +15,7 @@ compila_versoes:
       - shint: {"output": False, "use-wd": False}
   - run_passo1.sh|shint|pyg:
       - contents: "cd src_passo1/ && ./tetris"
-      - shint: {"output": True, "use-wd": False}
+      - shint: {"output": False, "use-wd": False}
 #   - src_passo1/run_cmake_and_compile.sh|bash:
 #       - bash: { 'use-wd' : False }
           

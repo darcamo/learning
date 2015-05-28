@@ -109,3 +109,26 @@ Para finalizar, finalizamos a SDL como antes.
 
 {{ d['src_passo2/main.cpp|idio']["FinalizaSDL"] }}
 
+
+## Passo 2.5: Criando uma janela ##
+
+Por enquanto colocamos todo o código na nossa função main no arquivo
+`main.cpp`, mas em geral o ideal é que o programa seja escrito de maneira
+modular. Vamos reescrever nosso programa até utilizando diferentes funções:
+uma para inicializar a SDL, outra para carregar imagens, etc..
+
+Vamos também criar outros arquivos, por exemplo um para conter nossas
+constantes, chamado de `general_defs.h` que podemos apenas incluir.
+
+{{ d['src_passo2.5/general_defs.h|pyg'] }}
+
+Como vamos usar os ponteiros para a janela e para as duas surfaces nessas
+funções e na main, **por enquanto** vamos transformá-las em variáveis
+globais movendo suas definições para fora da função main. Nosso novo
+arquivo `main.cpp` é mostrado abaixo.
+
+{{ d['src_passo2.5/main.cpp|pyg'] }}
+
+
+
+
