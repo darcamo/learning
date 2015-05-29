@@ -167,3 +167,20 @@ Note que devido ao laço `while( !quit )` o programa só irá terminar quando
 o evento `SDL_QUIT` ocorrer. Logo, não precisamos mais chamar `SDL_Delay`
 como antes.
 
+
+# Passo 4: Agindo de acordo com o pressionar de teclas
+
+Outro tipo de entrada que causa um evento é o teclado como tratar uma tecla
+pressionada é o que faita para podermos começar a realmente implementar o
+noso jogo.
+
+O nosso loop com `SDL_PollEvent` de antes vai recuperar eventos
+correspondendo ao pressionar de uma tecla. O tipo desse evento é
+`SDL_KEYDOWN`. Vamos adicionar um novo `if` após o teste de `SDL_QUIT` e
+testar se o tipo do evento é `SDL_KEYDOWN`. Em caso positivo, podemos
+descobrir que tecla foi pressionada comparando `e.key.keysym.sym` com cada
+tecla que estamos interessado e tratando de acordo. Nosso laço para o
+programa se torna então
+
+{{ d['src_passo4/main.cpp|idio']["WhileApplicationIsRunning"] }}
+
