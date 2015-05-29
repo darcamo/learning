@@ -24,6 +24,7 @@ compila_versoes:
 criando_tetris:
   - criando_tetris.md|jinja|pandoc|easyhtml:
       - buttondown.css
+      - tetris_pieces.png
       - sources
       - compila_versoes
       - pandoc:

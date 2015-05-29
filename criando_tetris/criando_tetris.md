@@ -184,3 +184,28 @@ programa se torna então
 
 {{ d['src_passo4/main.cpp|idio']["WhileApplicationIsRunning"] }}
 
+
+# Passo 5: Criando o esqueleto do nosso jogo
+
+Caso queira aprender mais sobre a SDL uma excelent referência é o tutorial
+[Beginning Game Programming v2.0](http://lazyfoo.net/tutorials/SDL/index.php). Com
+o que foi visto até então já podemos começar a escrever nosso jogo de
+tetris.
+
+Nosso "tabuleiro" de tetris terá um tamanho total de 11 colunas e 15
+linhas, como definido nas variáveis `VALID_SCREEN_WIDTH` e
+`VALID_SCREEN_HEIGHT` em `general_defs.h`. Cada peça pode ter no máximo até
+3 unidades de largura ou de comprimento, como por exemplo a peça abaixo
+
+![](tetris_pieces.png)
+
+Para o nosso jogo vamos começar criando três classes: `Game`, `Board` e
+`Piece`. A classe `Piece` representa uma peça do tetris que ainda está se
+movendo (ou a próxima peça). A classe `Board` representa o tabuleiro de
+tetris e é nela que vai ficar quais blocos já estão no tabuleiro, etc. Já a
+classe `Game` representa o jogo em si. Tanto as variáveis que antes eram
+globais (as surfaces, a janela do jogo, etc) quanto a chamada de diversas
+funções da SDL vão ficar na classe `Game`.
+
+
+
