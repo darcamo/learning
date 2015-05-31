@@ -118,9 +118,9 @@ modular. Vamos reescrever nosso programa até utilizando diferentes funções:
 uma para inicializar a SDL, outra para carregar imagens, etc..
 
 Vamos também criar outros arquivos, por exemplo um para conter nossas
-constantes, chamado de `general_defs.h` que podemos apenas incluir.
+constantes, chamado de `general_defs.hpp` que podemos apenas incluir.
 
-{{ d['src_passo2.5/general_defs.h|pyg'] }}
+{{ d['src_passo2.5/general_defs.hpp|pyg'] }}
 
 Como vamos usar os ponteiros para a janela e para as duas surfaces nessas
 funções e na main, **por enquanto** vamos transformá-las em variáveis
@@ -194,7 +194,7 @@ tetris.
 
 Nosso "tabuleiro" de tetris terá um tamanho total de 11 colunas e 15
 linhas, como definido nas variáveis `VALID_SCREEN_WIDTH` e
-`VALID_SCREEN_HEIGHT` em `general_defs.h`. Cada peça pode ter no máximo até
+`VALID_SCREEN_HEIGHT` em `general_defs.hpp`. Cada peça pode ter no máximo até
 3 unidades de largura ou de comprimento, como por exemplo a peça abaixo
 
 ![](tetris_pieces.png)

@@ -1,5 +1,5 @@
-#ifndef GENERAL_DEFS_H
-#define GENERAL_DEFS_H
+#ifndef GENERAL_DEFS_HPP
+#define GENERAL_DEFS_HPP
 
 // Tamanho (número de columnas e linhas) que nosso jogo de tetris vai ter
 #define VALID_SCREEN_WIDTH 11

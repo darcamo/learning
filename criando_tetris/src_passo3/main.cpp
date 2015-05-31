@@ -1,6 +1,6 @@
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "general_defs.h"
+#include "general_defs.hpp"
 
 
 /// "Prototipos"

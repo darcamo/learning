@@ -1,6 +1,6 @@
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "general_defs.h"
+#include "general_defs.hpp"
 
 
 /// "Prototipos"
@@ -137,15 +137,19 @@ int main(int argc, char *argv[])
                         {
                         case SDLK_UP:
                           // Código para a tecla "seta cima"
+                          std::cout << "Up" << std::endl;
                           break;
                         case SDLK_DOWN:
                           // Código para a tecla "seta baixo"
+                          std::cout << "Down" << std::endl;
                           break;
                         case SDLK_LEFT:
                           // Código para a tecla "seta esquerda"
+                          std::cout << "Left" << std::endl;
                           break;
                         case SDLK_RIGHT:
                           // Código para a tecla "seta direita"
+                          std::cout << "Right" << std::endl;
                           break;
                         default:
                           // Código default para qualquer outra tecla

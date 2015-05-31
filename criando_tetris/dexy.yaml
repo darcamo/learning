@@ -3,10 +3,15 @@ sources:
       - pyg: {lexer: "cmake"}
   - src_passo*/*.cpp|pyg:
       - pyg: {lexer: "c++", allow-unprintable-input: True}
-  - src_passo2.5/general_defs.h|pyg:
+  - src_passo2.5/general_defs.hpp|pyg:
       - pyg: {lexer: "c++", allow-unprintable-input: True}
   - src_passo*/*.cpp|idio:
       - idio: {lexer: "c++"}
+  - src_passo*/*.hpp|idio:
+      - idio: {lexer: "c++"}
+  - src_passo*/*.hpp|pyg:
+      - pyg: {lexer: "c++", allow-unprintable-input: True}
+  - src_passo*/*.cpp
   
 
         
