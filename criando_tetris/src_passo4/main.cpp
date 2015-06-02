@@ -16,14 +16,14 @@ void close();
 
 /// "DeclaraVariaveisGlobais"
 // Janela do nosso jogo
-SDL_Window* gameWindow = NULL;
+SDL_Window* gameWindow = nullptr;
   
 // surface contendo a "janela". Tudo que "copiarmos" para essa surface
 // mais tarde vai aparecer na janela do jogo
-SDL_Surface* gScreenSurface = NULL;
+SDL_Surface* gScreenSurface = nullptr;
 
 // surface para o fundo do jogo
-SDL_Surface* backgroundSDLSurface = NULL;
+SDL_Surface* backgroundSDLSurface = nullptr;
 
 
 /// "DefineAFuncaoInit"
@@ -43,7 +43,7 @@ bool init()
                                     SCREEN_WIDTH,  // Largura da janela
                                     SCREEN_HEIGHT, // Altura da Janela
                                     SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
-      if (gameWindow == NULL)
+      if (gameWindow == nullptr)
         {
           std::cout << "Não foi possível criar janela" << std::endl;
           success = false;
@@ -65,7 +65,7 @@ bool loadMedia()
   
   // Carrega o background de um arquivo bmp
   backgroundSDLSurface = SDL_LoadBMP("assets/background.bmp");
-  if( backgroundSDLSurface == NULL )
+  if( backgroundSDLSurface == nullptr )
     {
       std::cout << "Não foi possível carregar imagem" << "assets/background.bmp\n"
                 << "SDL Error: " << SDL_GetError() << std::endl;
@@ -80,12 +80,12 @@ void close()
 {
   // Libera a memória de variáveis criadas dinamicamente
   SDL_DestroyWindow(gameWindow);
-  gameWindow = NULL;
+  gameWindow = nullptr;
 
   // Não precisamos chamar SDL_FreeSurface para a surface da tela pois
   // SDL_DestroyWindow vai fazer isso para a gente
   SDL_FreeSurface(backgroundSDLSurface);
-  backgroundSDLSurface = NULL;
+  backgroundSDLSurface = nullptr;
 
   /// "FinalizaSDL"
   // Deve ser chamado por último

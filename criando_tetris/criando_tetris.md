@@ -62,7 +62,7 @@ O primeiro corresponde a janela que iremos criar para exibir nosso jogo. Os
 outros dois são "superfícies" (*surface*) para a janela do jogo e para o
 fundo. Qualquer coisa que seja copiada para a *surface* correspondendo a
 janela do jogo irá aparecer na tela. Note que por enquanto os ponteiros
-estão setados como NULL.
+estão setados como nullptr.
 
 Após a declaração dos 3 ponteiros temos a inicialização da SDL como antes.
 
@@ -76,7 +76,7 @@ isso usaremos a função `SDL_CreateWindow` como abaixo, seguida de
 
 Note que usamos as constantes `SCREEN_WIDTH` e `SCREEN_HEIGHT` que
 definimos anteriormente e testamos se a janela foi de fato criada (se o
-ponteiro `gameWindow` foi setado para um valor diferente de NULL. Fazemos
+ponteiro `gameWindow` foi setado para um valor diferente de nullptr. Fazemos
 algo semelhante para criar a surface com o fundo da tela, no qual
 carregamos a imagem `assets/background.bmp`.
 
