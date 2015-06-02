@@ -6,6 +6,9 @@ PROJECT (testsdl)
 # Define a variável VERSION que podemos usar com o cmake
 SET(VERSION 0.1)
 
+# Vamos usar o padrão mais novo do C++ (nullptr)
+SET (CMAKE_CXX_FLAGS "-Wall -std=c++11")
+
 # xxxxxxxxxx Find SDL2 library xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # For this we will use pkg-config
 INCLUDE(FindPkgConfig)
